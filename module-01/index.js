@@ -14,7 +14,8 @@
  */
 
 function createGreeting(name, age) {
-    // Ваш код здесь
+  console.log(`Привет, ${name}! Тебе ${age} лет.`)
 }
 
 module.exports = createGreeting;
+
