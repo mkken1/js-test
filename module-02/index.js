@@ -15,7 +15,11 @@
  */
 
 function checkAccess(age, isPremium) {
-    // Ваш код здесь
+  if (age < 18)
+    return "Доступ запрещен: возраст менее 18 лет"
+  if (isPremium)
+    return "Полный доступ"
+  return "Базовый доступ"
 }
 
 module.exports = checkAccess;
