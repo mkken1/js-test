@@ -14,7 +14,7 @@
  */
 
 function getLastElement(arr) {
-    // Ваш код здесь
+    return arr[arr.length - 1]
 }
 
 /**
@@ -34,7 +34,11 @@ function getLastElement(arr) {
  */
 
 function getElementAt(arr, index) {
-    // Ваш код здесь
+  if (index >= arr.length)
+    return undefined
+  if (index < 0)
+    return arr[arr.length + index]
+  return arr[index]
 }
 
 module.exports = { getLastElement, getElementAt };
