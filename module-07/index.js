@@ -13,7 +13,7 @@
  * @returns {Object} объект с полями name и age
  */
 function createUser(name, age) {
-    // Ваш код здесь
+  return {name, age}
 }
 
 /**
@@ -22,7 +22,7 @@ function createUser(name, age) {
  * @returns {string} строка в формате "Имя: X, Возраст: Y"
  */
 function formatUser(user) {
-    // Ваш код здесь
+  return `Имя: ${user.name}, Возраст: ${user.age}`
 }
 
 module.exports = { createUser, formatUser };
