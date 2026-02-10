@@ -5,7 +5,8 @@
  * @returns {Array} массив без дубликатов
  */
 function getUnique(arr) {
-    // Ваш код здесь
+  const unique = new Set(arr)
+  return [...unique]
 }
 
 /**
@@ -15,7 +16,15 @@ function getUnique(arr) {
  * @returns {Map} Map, где ключ — элемент, значение — количество
  */
 function countItems(arr) {
-    // Ваш код здесь
+  const map = new Map()
+
+  // if (arr == [])
+  //   return map
+  //
+  for (n of arr)
+    map.set(n, (map.get(n) || 0) + 1)
+
+  return map
 }
 
 module.exports = { getUnique, countItems };
