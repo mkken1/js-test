@@ -1,3 +1,5 @@
+const { value } = require("happy-dom/lib/PropertySymbol.js");
+
 /**
  * createMultiplier — создаёт функцию-множитель (замыкание)
  *
@@ -11,7 +13,8 @@
  * triple(4) → 12
  */
 function createMultiplier(factor) {
-    // Ваш код здесь
+  return (multiplyNumber) =>
+    factor*multiplyNumber
 }
 
 /**
@@ -22,7 +25,7 @@ function createMultiplier(factor) {
  * @returns {Object} новый объект с объединёнными свойствами
  */
 function mergeObjects(obj1, obj2) {
-    // Ваш код здесь
+  return {...obj1, ...obj2}
 }
 
 /**
@@ -32,7 +35,25 @@ function mergeObjects(obj1, obj2) {
  * @returns {Object} объект со свойством value и методами increment, decrement, reset
  */
 function createCounter(initial = 0) {
-    // Ваш код здесь
+  return {
+    startValue: initial,
+    value: initial,
+
+    increment: function() {
+      this.value += 1
+      return this.value
+    },
+
+    decrement: function() {
+      this.value -= 1
+      return this.value
+    },
+
+    reset: function() {
+      this.value = this.startValue
+      return this.value
+    }
+  }
 }
 
 module.exports = { createMultiplier, mergeObjects, createCounter };
