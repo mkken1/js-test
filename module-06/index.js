@@ -12,7 +12,12 @@
  * @returns {*} перемещённый элемент или undefined для пустого массива
  */
 function rotateLeft(arr) {
-    // Ваш код здесь
+  if (arr == [])
+    return undefined
+  const firstElement = arr.shift()
+  arr.push(firstElement)
+
+  return firstElement
 }
 
 /**
@@ -21,7 +26,12 @@ function rotateLeft(arr) {
  * @returns {*} перемещённый элемент или undefined для пустого массива
  */
 function rotateRight(arr) {
-    // Ваш код здесь
+  if (arr == [])
+    return undefined
+  const lastElement = arr.pop()
+  arr.unshift(lastElement)
+
+  return lastElement
 }
 
 module.exports = { rotateLeft, rotateRight };
