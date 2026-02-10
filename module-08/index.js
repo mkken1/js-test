@@ -16,8 +16,7 @@ function sumPositive(numbers) {
   let sum = 0;
 
   for (const num of numbers) {
-    // Баг где-то здесь...
-    if (num >= 0) {
+    if (num > 0) {
       sum += num;
     }
   }
@@ -34,7 +33,7 @@ function sumPositive(numbers) {
  */
 function getFullName(user) {
   // Баг где-то здесь...
-  return `${user.lastName} ${user.firstName}`;
+  return `${user.firstName} ${user.lastName}`;
 }
 
 /**
@@ -46,7 +45,7 @@ function getFullName(user) {
  */
 function filterAdults(users) {
   // Баг где-то здесь...
-  return users.filter(user => user.age > 18);
+  return users.filter(user => user.age >= 18);
 }
 
 module.exports = { sumPositive, getFullName, filterAdults };
