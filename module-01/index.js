@@ -14,7 +14,7 @@
  */
 
 function createGreeting(name, age) {
-  console.log(`Привет, ${name}! Тебе ${age} лет.`)
+  return `Привет, ${name}! Тебе ${age} лет.`
 }
 
 module.exports = createGreeting;

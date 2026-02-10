@@ -9,17 +9,15 @@
 
 // Function Declaration — double
 function double(n) {
-    // Ваш код здесь
+  return n*2
 }
 
 // Function Expression — triple
 const triple = function(n) {
-    // Ваш код здесь
+  return n*3
 };
 
 // Arrow Function — square
-const square = (n) => {
-    // Ваш код здесь
-};
+const square = (n) => n*n
 
 module.exports = { double, triple, square };
