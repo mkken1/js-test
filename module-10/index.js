@@ -18,9 +18,6 @@ function getUnique(arr) {
 function countItems(arr) {
   const map = new Map()
 
-  // if (arr == [])
-  //   return map
-  //
   for (n of arr)
     map.set(n, (map.get(n) || 0) + 1)
 
