@@ -15,7 +15,11 @@
  * @returns {string} - HTML-разметка карточки
  */
 function createHTML(user) {
-  // Ваш код здесь
+  return `<div class="user-card">
+  <img src="${user.avatar}" alt="${user.name}">
+  <h2>${user.name}</h2>
+  <p>${user.email}</p>
+</div>`
 }
 
 // Экспорт для Node.js (тесты) и браузера
