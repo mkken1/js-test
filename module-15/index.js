@@ -6,7 +6,12 @@
  * @returns {Promise} Promise, который resolve/reject через delay мс
  */
 function createPromise(shouldResolve, delay) {
-  // Ваш код здесь
+  return new Promise((resolve, reject) => {
+    if (shouldResolve === true)
+      setTimeout(resolve('Успех'), delay)
+    else
+      setTimeout(reject(new Error('Ошибка')), delay)
+  })
 }
 
 module.exports = { createPromise };
