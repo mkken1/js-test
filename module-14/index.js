@@ -7,7 +7,17 @@
  * @returns {Object} объект с методом cancel() для отмены таймеров
  */
 function executeInOrder(first, second, third) {
-  // Ваш код здесь
+  const arr = [
+    setTimeout(first, 0),
+    setTimeout(second, 100),
+    setTimeout(third, 200)
+  ]
+
+  return {
+    cancel: () => {
+      arr.forEach((callback) => clearTimeout(callback))
+    }
+  }
 }
 
 module.exports = { executeInOrder };
